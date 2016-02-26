@@ -2,7 +2,6 @@
  * Created by Yash on 23/02/16.
  */
 
-import Immutable from 'immutable'
 import _ from 'lodash'
 import constants from '../constants'
 

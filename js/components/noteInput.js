@@ -1,6 +1,5 @@
 import React from 'react';
 import _ from 'lodash';
-import Immutable from 'immutable'
 
 import TextField from 'material-ui/lib/text-field';
 import FloatingActionButton from 'material-ui/lib/floating-action-button';

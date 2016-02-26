@@ -8,7 +8,6 @@
  It returns a function instead of an object to make sure no one can change the initial state.
  */
 
-import Immutable from 'immutable'
 import _ from 'lodash'
 
 module.exports = function () {
