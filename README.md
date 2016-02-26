@@ -5,7 +5,7 @@ Inspired by Google's Material UI and built using React and Redux with Hot module
 **Installation**
 
  1. Clone the repo and run `npm start`
- 2. http://localhost:3000/ 
+ 2. [http://localhost:3000/](http://localhost:3000/) 
 
 Usage
 -----------
