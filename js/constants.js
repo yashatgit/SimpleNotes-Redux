@@ -7,8 +7,6 @@
  */
 
 module.exports = {
-
-  // ACTION TYPES
   ON_NOTE_CHANGE: "ON_NOTE_CHANGE",
   LOAD_NOTE: "LOAD_NOTE",
   ADD_NOTE: "ADD_NOTE",

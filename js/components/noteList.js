@@ -6,7 +6,8 @@ import List from 'material-ui/lib/lists/list';
 import Divider from 'material-ui/lib/divider';
 import Note from './note';
 
-let NoteList = function (props) {
+let NoteList = props => {
+
   var notes = props.notes;
 
   return (
@@ -30,29 +31,24 @@ let NoteList = function (props) {
       </div>
     </div>
   );
+
 };
 
 
-let mapStateToProps = function (state) {
+let mapStateToProps = state => {
   return {
     notes: state.notes,
-    selectedNote: state.notes.find(function (note) {
-      return note.id === state.selectedNoteId;
-    })
+    selectedNote: state.notes.find(note => note.id === state.selectedNoteId)
   };
 };
 
-let mapDispatchToProps = function (dispatch) {
+let mapDispatchToProps = dispatch => {
   return {
-    onNoteClick: function (noteId) {
-      dispatch(actions.onNoteClick(noteId));
-    },
-    onNoteDelete: function (note) {
-      dispatch(actions.deleteNote(note));
-    },
-    onAllNotesDelete: function () {
-      dispatch(actions.deleteAllNotes());
-    }
+    onNoteClick: noteId => dispatch(actions.onNoteClick(noteId)),
+
+    onNoteDelete: note => dispatch(actions.deleteNote(note)),
+
+    onAllNotesDelete: _ => dispatch(actions.deleteAllNotes())
   }
 };
 

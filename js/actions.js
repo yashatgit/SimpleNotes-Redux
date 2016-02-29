@@ -4,14 +4,14 @@
 
 /*
  This module contains action creators. They are functions which will return an object describing the actions.
- These actions are imported by Redux-aware components who need them, in our case it is just Home.
+ These actions are imported by Redux-aware components who need them.
  */
 
-var constants = require("./constants");
+import constants from "./constants"
 
-module.exports = {
+export default {
 
-  onNoteChange: function (changeItem, oldNoteObject) {
+  onNoteChange: (changeItem, oldNoteObject) => {
     return {
       changeItem,
       oldNoteObject,
@@ -19,26 +19,26 @@ module.exports = {
     };
   },
 
-  onNoteClick: function (selectedNoteId) {
+  onNoteClick: selectedNoteId => {
     return {
       type: constants.LOAD_NOTE,
       selectedNoteId: selectedNoteId
     };
   },
 
-  addNote: function () {
+  addNote: () => {
     return {
       type: constants.ADD_NOTE
     };
   },
 
-  deleteNote: function (note) {
+  deleteNote: note => {
     return {
       type: constants.DELETE_NOTE
     };
   },
 
-  deleteAllNotes: function () {
+  deleteAllNotes: _ => {
     return {
       type: constants.DELETE_ALL_NOTES
     };

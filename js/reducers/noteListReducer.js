@@ -2,7 +2,7 @@
  * Created by Yash on 23/02/16.
  */
 
-import _ from 'lodash'
+import {uniqueId} from 'lodash'
 import constants from '../constants'
 
 function getNewNote() {
@@ -10,7 +10,7 @@ function getNewNote() {
     t: 'Untitled Text',
     c: '',
     d: +new Date(),
-    id: _.uniqueId()
+    id: uniqueId()
   }
 }
 
@@ -47,6 +47,7 @@ function notes(state, action) {
       });
 
     case constants.DELETE_NOTE:
+
       var newState = Object.assign({}, state, {
         notes: _.remove(state.notes, function (n) {
           return n.id === action.note.id
@@ -56,6 +57,7 @@ function notes(state, action) {
       return newState;
 
     case constants.DELETE_ALL_NOTES:
+
       var newNoteObject = getNewNote();
 
       return Object.assign({}, {

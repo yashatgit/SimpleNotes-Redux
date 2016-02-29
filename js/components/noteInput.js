@@ -1,5 +1,4 @@
 import React from 'react';
-import _ from 'lodash';
 
 import TextField from 'material-ui/lib/text-field';
 import FloatingActionButton from 'material-ui/lib/floating-action-button';
@@ -26,7 +25,7 @@ export default React.createClass({
           ref="title"
           fullWidth={true} className="noteTitle" hintText="Note Title"
           value={note.t}
-          onChange={function(e) {
+          onChange={e => {
             props.onNoteChange({
               t: e.target.value
             }, note);
@@ -38,7 +37,7 @@ export default React.createClass({
           hintText="Enter Note Content" fullWidth={true} multiLine={true} rows={10}
           className="noteText"
           value={note.c}
-          onChange={function(e) {
+          onChange={e => {
             props.onNoteChange({
               c: e.target.value
             }, note);
@@ -46,9 +45,7 @@ export default React.createClass({
           />
 
         <FloatingActionButton backgroundColor={'#4caf50'} style={newBtnStyle} className="newNoteBtn"
-                              onClick={function() {
-                              props.addNote();
-                              }}>
+                              onClick={_ => props.addNote()}>
           <ContentAdd />
         </FloatingActionButton>
 

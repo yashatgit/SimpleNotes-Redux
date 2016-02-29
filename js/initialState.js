@@ -8,10 +8,10 @@
  It returns a function instead of an object to make sure no one can change the initial state.
  */
 
-import _ from 'lodash'
+import {uniqueId} from 'lodash'
 
 module.exports = function () {
-  var firstId = _.uniqueId();
+  var firstId = uniqueId();
 
   return {
     notes: [
@@ -22,7 +22,7 @@ module.exports = function () {
         d: +new Date()
       },
       {
-        id: _.uniqueId(),
+        id: uniqueId(),
         t: 'Untitled Note 2',
         c: 'Untitled Note content 2',
         d: +new Date()

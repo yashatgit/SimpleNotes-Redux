@@ -31,12 +31,12 @@ const getStyle = function (index) {
   }
 };
 
-const Note = (props) => {
+const Note = props => {
   var noteData = props.note,
     rightIconMenu = React.createElement(IconMenu, {
       onNoteDelete: props.onNoteDelete,
       iconButtonElement: iconButtonElement
-    }, <MenuItem onClick={ function() {props.onNoteDelete(noteData)}}>Delete</MenuItem>);
+    }, <MenuItem onClick={ _ => props.onNoteDelete(noteData)}>Delete</MenuItem>);
 
   return (
     <div className="noteItemWrap" style={getStyle(props.index)}>

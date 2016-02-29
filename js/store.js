@@ -6,8 +6,7 @@
  This file defines the main Redux Store. It will be required by all "smart" components in the app
  */
 
-import { createStore } from 'redux'
-import { combineReducers } from 'redux'
+import { createStore, combineReducers } from 'redux'
 
 import noteListReducer from './reducers/noteListReducer'
 import initialState from './initialState'
